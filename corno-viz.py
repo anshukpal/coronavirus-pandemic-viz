@@ -42,4 +42,6 @@ fig = px.scatter(group,
            log_x=True,
            range_x=[100, 100000],
            range_y=[0, 15000])
-fig.show()
+fig.update_layout(xaxis_showgrid=False, yaxis_showgrid=False,title="Covid-19 Spread Globally",xaxis_title="Recovered Cases",yaxis_title="Death Cases")
+plotly.offline.plot(fig, filename='Covid-19 Spread Acceleration.html')
+# fig.show()
